@@ -1,0 +1,222 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "fjalla-one", sans-serif;
+	color: black;
+}
+
+/*********************************************Pantalla de carga******************************************/
+div#loadPage{
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	transition: all .7s ease-out;
+	opacity: .91;
+	z-index: 9999;
+}
+
+	div#loadPage p{
+		font-family: "fjalla-one";
+		font-weight: bold;
+		font-size: 2.7vw;
+		color: white;
+		text-align: center;
+		margin-top: 8%;
+		margin-bottom: 5vh;
+	}
+
+img#logoLoad{
+	position: absolute;
+	top: 6vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 20%;
+	animation: giro 1.5s ease infinite;
+	-webkit-animation: giro 1.5s ease infinite;
+	-moz-animation: giro 1.s ease infinite;
+}
+
+@keyframes giro{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+/**********************************************Termina pantalla de carga*************************/
+
+div#menuTel{display: none;}
+
+div#menuPC{
+	background-color: #105B1E;
+	height: 20vw;
+	box-shadow: 0 4px 3px rgba(0,0,0,.5);
+	width: 100%;
+}
+
+	div img#sev{
+		margin: 2.8%;
+		width: 13.5vw;;
+	}
+
+	div div.name{
+		display: inline-block;
+		text-align: center;
+		float: left;
+		margin-top: 2.4vw;
+		margin-left: 3%;
+		margin-right: 2%;
+	}
+
+	div div.name h2{
+		color:white;
+		font-size: 2vw;
+		position: relative;
+		font-family: "fjalla-one", sans-serif;
+	}
+
+	div div.nameFix h2{
+		font-size: 1.2vw;
+	}
+
+	div#backgroundNav{
+		background-color: white;
+		height: 5.3vw;
+		display: inline-block;
+		width: 80%;
+		float: right;
+		border-radius: 0 0 0 10px;
+		-webkit-transition: all ease 1s;
+		-o-transition: all ease 1s;
+		transition: all ease 1s;
+		box-shadow: 0 4px 3px rgba(255, 255, 255, 0.5);
+	}
+
+	nav#navMain{
+		display: block;
+		text-align: center;
+		padding: 0 3%;
+		overflow: hidden;
+		background-color: #ffffff;
+		border-radius: 0 0 0 10px;
+		
+	}
+
+
+		nav#navMain ul li{
+			display: inline-block;
+			float: left;
+			width: auto;
+			height: 5%;
+			font-size: 1.55vw;
+			margin: 0 1%;
+			line-height: 5.3vw;
+		}
+
+			nav#navMain ul li:hover{
+				border-top:#45AA70 5px solid;
+				color: #45AA70;
+				font-weight: bold;
+			}
+
+	img#logo{
+		width: 15%;
+		height: auto;
+		display: inline-block;
+		float: left;
+		margin: 1.5%;
+	}
+
+.nav-fixed{
+	position: fixed;
+	width: 50%;
+	z-index: 10;
+	top: 0;
+}
+
+/**************************************MENU TELEFONO***************************************/
+@media screen and ( max-width: 960px ) {
+	
+	div#menuPC{display: none;}
+	div#menuTel{display: block;}
+
+	img#logoLoad{
+		width: 50%;
+	}
+
+	div#menuMovil{
+		background-color: #105B1E;
+		height: 15vw;
+		width: 100%;
+	}
+
+		div#menuMovil img#logMenu{
+			width: 10%;
+			margin: 3.2%;
+		}
+
+		div#menuMovil img#logMenu:hover{
+			cursor: pointer;
+			animation: giro 1s ease-in-out;
+		}
+
+		div#menuMovil input{
+			display: none;
+	}
+
+	h3#tittleTel{
+		float: right;
+		line-height: 15vw;
+		text-align: center;
+		margin-right: 25%;
+		color: white;
+		font-size: 5vw;
+		font-family: "fjalla-one", sans-serif;
+	}
+
+	nav#botoneraMovil {
+	    position: absolute;
+	    width: 60vw;
+	    height: auto;
+	    background-color: #fff;
+	    top: 15vw;
+	    left: -100%;
+	    transition: left .8s ease-out;
+		box-shadow: 0 4px 3px rgba(0,0,0,.5);
+		z-index: 1000;
+	}	
+
+		nav#botoneraMovil ul li {
+		    width: 100%;
+		    line-height: 40px;
+		    text-align: center;
+		    border: 1px solid #105B1E;
+		    border-right: 2px solid #105B1E;
+		    border-left: 2px solid #105B1E;
+		    border-bottom: 2px solid #105B1E;
+		    background-color: white;
+			cursor: pointer;
+			text-decoration: none;
+		    font-size: 3vw;
+		    color: #000000;
+		    font-weight: bold;
+		}
+
+			nav#botoneraMovil ul li:hover{
+				background-color:#9ca19d;
+				color: black;
+				transition: background-color .5s ease-out, color .5s ease-out;
+			}
+
+			input#botonMovil:checked ~ nav#botoneraMovil{
+				left: 0px;
+			}
+	}

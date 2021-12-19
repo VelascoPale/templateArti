@@ -1,0 +1,500 @@
+body{
+  background: linear-gradient(to left, #746a5e, #48a589);
+
+}
+
+/***************** MENU HORARIOS *******************/
+
+ .container{
+   position: relative;
+  width: 90%;
+  max-width: 1100px;
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "segundo segundo cuarto cuarto sexto sexto";
+    grid-gap: 5vw;
+}
+
+.container div#segundo{
+  grid-area: segundo;
+}
+
+.container div#cuarto{
+  grid-area: cuarto;
+}
+
+.container div#sexto{
+  grid-area: sexto;
+}
+
+.container .box{
+    position: relative;
+    height: 40vw;
+    background:#062108;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #000;
+}
+
+.container .box:before{
+    content: '';
+    position: absolute;
+    top:-0.1vw;
+    left: -0.2vw;
+    right:-0.2vw;
+    bottom: -0.2vw;
+    background: #fff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+}
+
+.container .box:nth-child(1):before{
+    background: linear-gradient(315deg, #ff0057, #e64a19);
+}
+
+.container .box:nth-child(2):before{
+    background: linear-gradient(315deg, #89ff00, #00bcd4);
+}
+
+.container .box:nth-child(3):before{
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+.container .box:after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0.8vw;
+    height: 0.16vw;
+    background: radial-gradient(255,255,255,0.05);
+    pointer-events: none;
+}
+
+.content{
+    position: relative;
+    padding: 3vw;
+    transform: translateY(3vw);
+}
+
+.box .content h2{
+    position: absolute;
+    top: -5vw;
+    right: .5vw;
+    margin: 0;
+    padding: 0;
+    font-size: 16vw;
+    color:rgb(255, 255,255,.15);
+    transition: 0.5s;
+}
+
+.box:hover .content h2{
+  top:-140px;
+}
+
+.box .content h3{
+    margin: 0 0 1vw;
+    padding: 0;
+    font-size: 2vw;
+    font-weight: 500;
+    color:#fff;
+}
+.box .content p{
+    margin: 0;
+    padding: 0;
+    color:#fff;
+    font-size: 1.5vw;
+}
+
+.box .content a{
+  font-size: 1.5vw;
+    position: relative;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    border: 0.1vw solid #fff;
+    display: inline-block;
+    color:#fff;
+    transition:0.5s;
+    margin: 2vw 0 0;
+    transform: translateY(-4vw);
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 1vw;
+    
+}
+
+.box:hover .content a{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.box .content a:hover{
+    color:#000;
+    background: #fff;
+}
+
+@media screen and ( max-width: 960px ){
+
+  .container{
+    grid-template-areas: "segundo segundo segundo cuarto cuarto cuarto"
+               "sexto sexto sexto sexto sexto sexto";
+  }
+
+  .container div#segundo{
+    grid-area: segundo;
+  }
+
+  .container div#cuarto{
+    grid-area: cuarto;
+  }
+
+  .container div#sexto{
+    grid-area: sexto;
+  }
+
+  .box:hover .content h2{
+    top:-50px;
+  }
+
+  .box .content h3{
+    font-size: 4vw;
+  }
+  .box .content p{
+    font-size: 2.5vw;
+  }
+
+  .box .content a{
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and ( max-width:495px ){
+  .container{
+    margin-bottom: 25%;
+  }
+}
+
+/***************** HORARIOS *******************/
+
+  .horariosCont{
+    width: 90%;
+    max-width: 1100px;;
+    margin: 5% auto;
+    display: grid;
+    grid-gap: 10px;
+    border:1px solid #000;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    background-color: #062108;
+  }
+
+  .horariosCont{
+    position: relative;
+    padding: 3vw;
+    transform: translateY(3vw);
+  }
+
+  .horariosCont:before{
+    content: '';
+    position: absolute;
+    top:-0.1vw;
+    left: -0.2vw;
+    right:-0.2vw;
+    bottom: -0.2vw;
+    background: #ffffff;
+    transform: skew(2deg, 2deg);
+    z-index: -1;
+  }
+
+  .horariosCont img{
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+@media screen and ( max-width:960px ){
+
+  .horariosCont{
+    background-color: #ffffff;
+    border:5px solid #062108;;
+  }
+
+  .horariosCont a{
+    grid-column: span 3;
+  }
+
+}
+/***************** CSS GRID  *******************/
+
+.saludo{
+  background-image: url(img/para.jpg);
+  width: 100%;
+  height: 60vw;
+  max-height: 700px;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .saludo h1{
+    font-family: "fjalla-one", sans-serif;
+    color: white;
+    font-size: 4vw;
+  }
+
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.contenedorCont{
+  width: 93%;
+  height: auto;
+  margin: 3vw auto;
+  font-size: 4vw;
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: .4fr 2fr;
+  grid-template-rows: 2fr 2fr;
+  grid-template-areas: "aside form"
+                       "aside form"
+                      "R       R";
+}
+
+a#download{
+  color: white;
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+}
+
+    .contenedorCont .form{
+     width: 100%;
+  height: 70vw;
+  background-color: #6bbd90;
+  
+  border-radius: 20px;
+  margin: auto;
+      grid-area: form;
+    }
+
+    .contenedorCont .form .select{
+      width: 50vw;
+      height: 4vw;
+      border-radius: 10px;
+    }
+    input[type=submit]{
+  position: relative;
+  width: 15vw;
+  height: 4vw;
+  border-radius: 20px;
+  border:0px;
+  background-color: #086A87;
+      font:14px normal normal uppercase helvetica, arial, serif;
+
+}
+
+
+
+
+
+p{
+  text-shadow: 0 1px 0 #fff;
+  font-size: 3vw;
+  margin: 2vw;
+}
+
+    .contenedorCont .aside{
+      background-color: #6bbd90;
+      grid-area: aside;
+      height: 530px;
+      width: 100%;
+      padding-top: 2vw;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "acceso acceso"
+                 "descargas descargas";
+      box-shadow: 0 4px 3px rgba(0,0,0,.5);
+    }
+
+    .fix-aside{
+      position: -webkit-sticky;
+      position: sticky;
+      z-index: 3;
+      top: 0vw;
+    }
+
+     .R{
+      width: 100%;
+      height: 15vw;
+      grid-area:R;
+      background-color: #6bbd90;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************** CONTENIDO INDEX *******************/
+
+marquee{
+  width: 100%;
+  height: 35vw;;
+  background-color: #062108;
+  padding: 0 5%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+  marquee h3{
+    font-size: 3.8vw;
+    color: #fff;
+  }
+
+  marquee p{
+    font-size: 2.6vw;
+    text-align: justify;
+    color: #fff
+  }
+
+nav.descargas{
+  grid-area: descargas;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav.descargas ul{
+  font-size: 1.4vw;
+  list-style: none;
+  padding: 10px;
+}
+
+  nav.descargas ul li:hover{
+    color: white;
+  }
+
+  nav.descargas h3{
+    font-size: 2.2vw;
+  }
+
+nav.acceso{
+  grid-area: acceso;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav.acceso ul{
+  font-size: 1.4vw;
+  list-style: none;
+  padding: 10px;
+}
+
+  nav.acceso ul li:hover{
+    color: white;
+  }
+
+  nav.acceso h3{
+  font-size: 2.2vw;
+}
+
+article.sinImg{
+  margin-top: 5%;
+  padding: 5%;
+  text-align: justify;
+  background-color: #6bbd90;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+  article.sinImg h2{
+    font-size: 4vw;
+  }
+
+  article.sinImg p{
+    font-size: 2.3vw;
+  }
+
+article.conImg{
+  margin-top: 5%;
+  padding: 5%;
+  text-align: center;
+  background-color:  #6bbd90;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+  article.conImg h2{
+    font-size: 4vw;
+  }
+
+  article.conImg p{
+    font-size: 2.3vw;
+    text-align: justify;
+  }
+
+  article.conImg img#newImg{
+    width: 30%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 3% 0;
+  }
+
+
+
+
+
+
+
+
+
+
+/***************** AJUSTA MOV *******************/
+
+@media screen and ( max-width:960px ){
+  
+  .contenedorCont{
+    grid-template-rows: .8fr 2fr;
+    grid-template-areas: "aside aside"
+                         "form form";
+  }
+
+    .contenedorCont .aside{
+      grid-area: aside;
+      margin: 0;
+      height: auto;
+      grid-template-areas: "acceso descargas"
+                "acceso descargas";
+    }
+
+    .contenedorCont .form{
+      grid-area: form;
+      margin: 0;
+    }
+
+}

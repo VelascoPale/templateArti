@@ -1,0 +1,93 @@
+div#footerMov{ display: none; }
+
+div#footerPC{
+	bottom: 0;
+	height: 18vw;
+	width: 100%;
+	background-color: #105B1E;
+
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: 1fr 1.3fr;
+	grid-template-areas: "dir dir vacio"
+						 "presentacion contacto vacio";
+}
+
+	div#footerPC div#direccion{
+		background-color: black;
+		border-bottom-right-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		grid-area: dir;
+	}
+
+		div#footerPC div#direccion h3{
+			color: white;
+			font-size: 1.8vw;
+			text-align: center;
+		}
+
+
+div#footerPC div#presCapa{
+	display: inline-block;
+	padding-left: 3.5%;
+	grid-area: presentacion;
+}
+
+div#footerPC div#vacio{
+	grid-area: vacio;
+}
+
+div#footerPC div#contacto{
+	grid-area: contacto;
+}
+
+	div#footerPC div#contacto #conPag{
+		font-size: 1.3vw;
+		text-decoration: underline;
+	}
+
+		div#footerPC div#contacto #conPag:hover{
+			color: white;
+		}
+
+@media screen and ( max-width:960px ){
+
+	div#footerPC{ display: none; }
+
+	div#footerMov { 
+		display: block;
+		display: grid;
+		grid-gap: 1.2%;
+		height: 15vw;
+		width: 100%;
+		background-color: #105B1E;
+		grid-template-columns: repeat(3,1fr);
+		bottom: 0;
+	}
+
+	div#footerMov div#direccionMov{
+		background-color: black;
+		border-top-right-radius: 20px;
+		border-bottom-right-radius: 20px;
+		padding: 1%;
+		padding-left: 3.5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	div#footerMov div#presCapaMov{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	div#footerMov div#contactoMov{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
